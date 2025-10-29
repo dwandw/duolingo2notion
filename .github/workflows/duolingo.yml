@@ -56,3 +56,8 @@ jobs:
       - name: udpate heatmap 
         run: |
             python -u scripts/update_heatmap.py
+
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          keep_minimum_runs: 3
